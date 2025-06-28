@@ -1,8 +1,9 @@
 # Desafio: Movimentação das peças de xadrez em C
 
 ## Objetivo:
-- Simula movimentos básicos das peças de xadrez, como Torre, Bispo e Rainha, usando estruturas de repetição (for, while e do-while).
+- Simula movimentos básicos das peças de xadrez, como Torre, Bispo, Rainha e Cavalo, usando estruturas de repetição (for, while e do-while).
 - A lógica é impressa no console, mostrando cada passo deslocado de forma textual.
+- Adicionando 
 
 ---
 
@@ -46,4 +47,9 @@ Movimento da rainha, 8 casas à esquerda:
 6ª casa à *esquerda*
 7ª casa à *esquerda*
 8ª casa à *esquerda*
+
+Movimento do cavalo em 'L':
+1ª casa: cima
+2ª casa: cima
+3ª casa: esquerda
 ```
