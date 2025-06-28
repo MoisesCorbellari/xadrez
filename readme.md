@@ -20,6 +20,10 @@
 - 8 casas à esquerda
 - Estrutura usada: **do-while**
 
+### ♞ Cavalo:
+- 3 casas em 'L': cima, cima, esquerda
+- Estrutura usada: **while e for**
+
 ---
 
 ## Saída:
