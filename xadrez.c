@@ -1,65 +1,52 @@
 #include <stdio.h>
-int main()
-{
-    // usando a estrutura for, while e do-while para mover as peças de xadrez (torre, bispo, rainha)
+#include "src/tabuleiro.h"
+int main(){
+    int torre, rainha, bispo, cavalo;
 
     // torre
-    printf("Movimento da Torre, 5 casas à direita:\n");
-    for (int torre = 1;
-         torre <= 5;
-         torre++)
-    {
-        printf("%dª casa à *direita*\n", torre);
+    printf("====== Movimento da Torre ======\n");{
+        printf("Quantas casas? ");
+        scanf("%d", &torre);
+        passoTorre(torre);
+
+    }
+
+    printf("\n");
+    
+    // rainha
+    printf("====== Movimento da rainha ======\n");{
+
+        printf("Quantas casas? ");
+        scanf("%d", &rainha);
+        passoRainha(rainha);
     }
 
     printf("\n");
 
     // bispo
-    printf("Movimento do bispo, 5 casas na diagonal (Cima, Direita):\n");
-    {
+    printf("====== Movimento do bispo - Diagonal ======\n");{
 
-        int bispo = 1;
-        while (bispo <= 5)
-        {
-            printf("%dª casa na *diagonal*\n", bispo);
-            bispo++;
-        }
-    }
-
-    printf("\n");
-
-    // rainha
-    printf("Movimento da rainha, 8 casas à esquerda:\n");
-    {
-
-        int rainha = 1;
-        do
-        {
-            printf("%dª casa à *esquerda*\n", rainha);
-            rainha++;
-        } while (rainha <= 8);
+        printf("Quantas casas? ");
+        scanf("%d", &bispo);
+        passoBispo(bispo, bispo);
     }
 
     printf("\n");
 
     // cavalo
-    printf("Movimento do cavalo em 'L':\n");{
-        int movimento = 1;
-        int cavalo = 1;
+    printf("====== Movimento do cavalo - em'L' ======\n");{
+        int escolha;
 
-        while (movimento > 0)
-        {
-            for (int i = 0; i < 2; i++)
-            {
-                printf("%dª casa: cima\n", cavalo);
-                cavalo++;
-            }
-            printf("%dª casa: esquerda\n", cavalo);
-            cavalo++;
+        printf("Escolha a direção:\n");
+        printf("1 - cima-direita\n2 - cima-esquerda\n3 - baixo-direita\n4 - baixo-esquerda\n");
+        printf("5 - direita-cima\n6 - direita-baixo\n7 - esquerda-cima\n8 - esquerda-baixo\n");
+        printf("\nDigite o número da direção desejada: ");
+        scanf("\n%d", &escolha);
 
-            movimento--;
-        }
+        passoCavalo(escolha);
     }
+
+    printf("\n");
 
     return 0;
 }
